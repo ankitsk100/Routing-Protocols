@@ -1,0 +1,26 @@
+enable
+configure terminal
+
+! ---------- Interfaces (adjust interface IDs if your PT uses different ports) ----------
+! LAN side (to Switch0 / 192.168.1.0/24)
+interface g0/0
+ ip address 192.168.1.1 255.255.255.0
+ no shutdown
+exit
+
+! WAN side (to R2 / 10.10.10.0/30)
+interface s0/0/0
+ ip address 10.10.10.1 255.255.255.252
+ no shutdown
+exit
+
+! ---------- RIP v2 ----------
+router rip
+ version 2
+ no auto-summary
+ network 192.168.1.0
+ network 10.10.10.0
+exit
+
+end
+write memory

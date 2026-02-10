@@ -1,0 +1,23 @@
+enable
+configure terminal
+
+! R2-R1 (10.10.10.0/30) -> R2 = .2
+interface s0/0/0
+ ip address 10.10.10.2 255.255.255.252
+ no shutdown
+exit
+
+! R2-R3 (10.10.10.8/30) -> R2 = .9
+interface s0/0/1
+ ip address 10.10.10.9 255.255.255.252
+ no shutdown
+exit
+
+router eigrp 30
+ no auto-summary
+ network 10.10.10.0 0.0.0.3
+ network 10.10.10.8 0.0.0.3
+exit
+
+end
+write memory

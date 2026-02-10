@@ -1,0 +1,26 @@
+enable
+configure terminal
+
+! ---------- Interfaces ----------
+! WAN to R1 / 10.10.10.0/30
+interface s0/0/0
+ ip address 10.10.10.2 255.255.255.252
+ no shutdown
+exit
+
+! WAN to R3 / 20.20.20.0/30
+interface s0/0/1
+ ip address 20.20.20.1 255.255.255.252
+ no shutdown
+exit
+
+! ---------- RIP v2 ----------
+router rip
+ version 2
+ no auto-summary
+ network 10.10.10.0
+ network 20.20.20.0
+exit
+
+end
+write memory

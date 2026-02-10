@@ -1,0 +1,26 @@
+enable
+configure terminal
+
+! ---------- Interfaces ----------
+! WAN to R2 / 20.20.20.0/30
+interface s0/0/1
+ ip address 20.20.20.2 255.255.255.252
+ no shutdown
+exit
+
+! LAN side (to Switch1 / 192.168.2.0/24)
+interface g0/0
+ ip address 192.168.2.1 255.255.255.0
+ no shutdown
+exit
+
+! ---------- RIP v2 ----------
+router rip
+ version 2
+ no auto-summary
+ network 20.20.20.0
+ network 192.168.2.0
+exit
+
+end
+write memory

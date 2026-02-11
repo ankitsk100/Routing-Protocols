@@ -1,0 +1,21 @@
+! =========================
+! Router: R1
+! OSPF: Process 11, Area 0
+! Router-ID: 1.1.1.1
+! Advertised Networks:
+!  - 192.168.1.0/24
+!  - 10.10.10.0/30
+!  - 30.30.30.0/30
+! =========================
+
+enable
+configure terminal
+
+router ospf 11
+ router-id 1.1.1.1
+ network 192.168.1.0 0.0.0.255 area 0
+ network 10.10.10.0 0.0.0.3 area 0
+ network 30.30.30.0 0.0.0.3 area 0
+exit
+
+do write memory

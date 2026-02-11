@@ -1,0 +1,19 @@
+========================
+BGP Verification
+========================
+
+show ip bgp summary
+show ip bgp
+show ip route
+show ip route bgp
+show ip bgp neighbors
+
+========================
+Connectivity Tests
+========================
+
+From AS20 PC:
+ping 192.168.2.10
+
+From AS50 PC:
+ping 192.168.1.10

@@ -2,9 +2,9 @@
 
 This project demonstrates a **Multi-Area OSPF** design (Area 0 backbone + non-backbone areas) using Cisco routers in **Packet Tracer**.
 
-##Topology
+## Topology
 
-docs/topology.png
+![Topology](docs/topology.png)
 
 ## What’s Included
 - Packet Tracer lab file (`.pkt`)

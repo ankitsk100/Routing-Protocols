@@ -4,6 +4,103 @@ This project demonstrates dynamic routing using **EIGRP (AS 30)** across four Ci
 
 ---
 
+# 📚 What is EIGRP?
+
+**EIGRP (Enhanced Interior Gateway Routing Protocol)** is an advanced distance-vector routing protocol developed by Cisco.
+
+It is used for routing **within a single Autonomous System (AS)** and is commonly deployed in enterprise networks.
+
+EIGRP combines features of:
+
+- Distance Vector protocols (like RIP)
+- Link-State protocols (like OSPF)
+
+Because of this, it is often called a **Hybrid Routing Protocol**.
+
+---
+
+## 🏢 Where is EIGRP Used?
+
+EIGRP is used:
+
+- Inside enterprise networks
+- Between branch offices
+- In campus networks
+- In internal infrastructure routing
+
+It is not typically used between ISPs (that is BGP’s role).
+
+---
+
+## ⚙️ How EIGRP Works
+
+EIGRP uses:
+
+- **DUAL Algorithm (Diffusing Update Algorithm)**  
+- Maintains:
+  - Neighbor Table
+  - Topology Table
+  - Routing Table
+
+EIGRP calculates the best path based on a composite metric including:
+
+- Bandwidth
+- Delay
+- Reliability
+- Load
+- MTU
+
+By default, bandwidth and delay are used.
+
+---
+
+## 🔑 Key Features of EIGRP
+
+- Fast convergence
+- Loop-free routing
+- Supports VLSM and CIDR
+- Uses multicast (224.0.0.10)
+- Supports unequal-cost load balancing
+- Low bandwidth usage
+
+---
+
+## 📊 EIGRP Administrative Distance
+
+| Route Type | Administrative Distance |
+|------------|-------------------------|
+| Internal EIGRP | 90 |
+| External EIGRP | 170 |
+
+---
+
+## 🔄 EIGRP Terminology
+
+- **Successor** → Best path to a destination
+- **Feasible Successor** → Backup path
+- **Feasibility Condition** → Loop prevention rule
+- **DUAL** → Algorithm used for route calculation
+
+---
+
+## 🧠 Why This Lab is Important
+
+This lab demonstrates:
+
+- Dynamic routing inside an enterprise
+- Neighbor relationship establishment
+- Automatic route advertisement
+- Convergence behavior
+- Internal AS routing design
+
+Understanding EIGRP is essential for:
+
+- Enterprise Network Engineers
+- NOC Engineers
+- Infrastructure Engineers
+- OT Network Engineers
+
+---
 ## Network Topology
 
 ![Topology](docs/topology.png)

@@ -1,0 +1,23 @@
+enable
+configure terminal
+hostname R3
+no ip domain-lookup
+
+interface g0/0
+ description R3 LAN
+ ip address 192.168.3.1 255.255.255.0
+ no shutdown
+
+interface g0/1
+ description Link to R2 (Area 10)
+ ip address 10.0.23.2 255.255.255.252
+ no shutdown
+
+router ospf 10
+ router-id 3.3.3.3
+ passive-interface g0/0
+ network 192.168.3.0 0.0.0.255 area 10
+ network 10.0.23.0 0.0.0.3 area 10
+
+end
+write memory

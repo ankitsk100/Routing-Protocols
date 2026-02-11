@@ -12,6 +12,77 @@ The objective is to establish BGP neighbor relationships and advertise directly 
 
 ---
 
+## 📚 What is BGP?
+
+The **Border Gateway Protocol (BGP)** is a path-vector routing protocol used to exchange routing information between different Autonomous Systems (AS) on the Internet.
+
+BGP is the protocol that makes the Internet work.
+
+Unlike interior routing protocols such as OSPF or EIGRP, which operate within a single organization, BGP is designed for inter-domain routing between multiple organizations or service providers.
+
+---
+
+## 🏢 What is an Autonomous System (AS)?
+
+An **Autonomous System (AS)** is a collection of IP networks under a single administrative control that presents a common routing policy to the Internet.
+
+Each AS is identified by a unique **Autonomous System Number (ASN)**.
+
+In this project:
+
+- AS 20 → Enterprise Network A
+- AS 35 → Transit ISP
+- AS 50 → Enterprise Network B
+
+---
+
+## 🔄 Types of BGP
+
+There are two main types of BGP:
+
+### 1️⃣ eBGP (External BGP)
+- Runs between different Autonomous Systems.
+- Used for Internet and ISP communication.
+- Implemented in this project.
+
+### 2️⃣ iBGP (Internal BGP)
+- Runs within the same Autonomous System.
+- Used inside large enterprise or ISP networks.
+
+---
+
+## ⚙️ How BGP Works
+
+BGP:
+- Establishes neighbor relationships
+- Exchanges routing updates
+- Uses path attributes (AS Path, Local Preference, MED, etc.)
+- Selects the best path based on policy
+
+It is considered a **policy-based routing protocol** rather than just a shortest-path protocol.
+
+---
+
+## 🌍 Why BGP is Important
+
+- Powers global Internet routing
+- Allows multi-homing to multiple ISPs
+- Provides routing policy control
+- Enables large-scale scalable routing
+
+---
+
+## 🧠 Why This Lab is Important
+
+This lab demonstrates:
+
+- eBGP peering between multiple AS domains
+- Route advertisement using network statements
+- Transit AS behavior
+- Real-world ISP simulation
+
+---
+
 ## 🗺 Network Topology
 
 ![BGP Multi-AS Topology](docs/topology.png)

@@ -4,6 +4,108 @@ This project demonstrates dynamic routing using **RIPv2** across three Cisco rou
 
 ---
 
+---
+
+# 📚 What is RIP?
+
+**RIP (Routing Information Protocol)** is one of the oldest distance-vector routing protocols used for dynamic routing within a network.
+
+It is designed for small networks and uses hop count as its routing metric.
+
+RIP automatically shares routing information between routers, allowing them to learn about remote networks without manually configuring static routes.
+
+---
+
+## 🏗 What is Distance-Vector Routing?
+
+Distance-vector protocols:
+
+- Share routing tables with directly connected neighbors
+- Periodically update routes
+- Select the best path based on a simple metric
+
+In RIP, the metric used is **hop count**.
+
+---
+
+## 🔢 RIP Metric (Hop Count)
+
+- Each router hop adds +1 to the hop count.
+- The maximum hop count allowed is **15**.
+- A hop count of **16 is considered unreachable**.
+
+Lower hop count = Better route.
+
+---
+
+## 🔄 How RIP Works
+
+1️⃣ Routers send their full routing table to neighbors every 30 seconds.
+
+2️⃣ Neighbor routers update their routing tables based on received information.
+
+3️⃣ If a better route (lower hop count) is found, it replaces the existing route.
+
+4️⃣ RIP uses loop-prevention mechanisms such as:
+   - Split Horizon
+   - Route Poisoning
+   - Hold-down Timers
+
+---
+
+## 📦 RIP Versions
+
+### RIP Version 1 (RIPv1)
+- Classful routing
+- Does not support VLSM
+- Broadcast updates
+
+### RIP Version 2 (RIPv2)
+- Classless routing
+- Supports VLSM and CIDR
+- Uses multicast address 224.0.0.9
+- Supports authentication
+
+Most modern labs use **RIPv2**.
+
+---
+
+## 🔑 Key Characteristics of RIP
+
+- Simple configuration
+- Easy to understand
+- Suitable for small networks
+- Slow convergence
+- Limited scalability
+
+---
+
+## ⚠ Limitations of RIP
+
+- Maximum 15 hops
+- Slow convergence compared to OSPF and EIGRP
+- Not suitable for large enterprise networks
+- Less efficient bandwidth usage
+
+---
+
+## 🎯 When is RIP Used?
+
+RIP is mainly used for:
+
+- Small networks
+- Educational labs
+- Basic routing demonstrations
+
+It is rarely used in modern enterprise environments.
+
+---
+
+## 🧠 In Simple Terms
+
+RIP allows routers to share routes with neighbors and choose paths based on the fewest number of hops, making it simple but limited in scalability.
+
+
 ## Network Topology
 
 ![Topology](docs/topology.png)

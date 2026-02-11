@@ -1,0 +1,28 @@
+enable
+configure terminal
+hostname R2
+no ip domain-lookup
+
+interface g0/0
+ description Link to R1 (Area 0)
+ ip address 10.0.12.2 255.255.255.252
+ no shutdown
+
+interface g0/1
+ description Link to R3 (Area 10)
+ ip address 10.0.23.1 255.255.255.252
+ no shutdown
+
+interface g0/2
+ description Link to R4 (Area 20)
+ ip address 10.0.24.1 255.255.255.252
+ no shutdown
+
+router ospf 10
+ router-id 2.2.2.2
+ network 10.0.12.0 0.0.0.3 area 0
+ network 10.0.23.0 0.0.0.3 area 10
+ network 10.0.24.0 0.0.0.3 area 20
+
+end
+write memory

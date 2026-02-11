@@ -2,6 +2,94 @@
 
 This project demonstrates a basic multi-router OSPF deployment (Area 0) connecting three LANs using a triangular WAN design. All routers form OSPF neighbor adjacencies and advertise their directly connected networks.
 
+---
+
+# 📚 What is OSPF?
+
+**OSPF (Open Shortest Path First)** is a link-state Interior Gateway Protocol (IGP) used for dynamic routing within a single Autonomous System (AS).
+
+It is an open standard protocol widely used in enterprise and service provider networks for fast, scalable, and reliable routing.
+
+Unlike distance-vector protocols (like RIP), OSPF builds a complete map of the network topology before calculating routes.
+
+---
+
+## 🏗 What is Single-Area OSPF?
+
+In Single-Area OSPF, all routers belong to the same OSPF area, typically **Area 0**.
+
+This design is suitable for:
+
+- Small to medium-sized networks
+- Lab environments
+- Simple enterprise networks
+
+All routers share the same link-state database and participate equally in routing decisions.
+
+---
+
+## 🔄 How OSPF Works
+
+1️⃣ Routers discover neighbors using **Hello packets**.
+
+2️⃣ Once neighbors are established, routers exchange **Link-State Advertisements (LSAs)**.
+
+3️⃣ Each router builds a **Link-State Database (LSDB)** containing the full network topology.
+
+4️⃣ OSPF runs the **Shortest Path First (SPF) algorithm (Dijkstra's Algorithm)** to calculate the best path to each destination.
+
+5️⃣ The best routes are installed into the routing table.
+
+---
+
+## 🔑 Key Features of OSPF
+
+- Link-State routing protocol
+- Uses cost as metric (based on bandwidth)
+- Fast convergence
+- Supports VLSM and CIDR
+- Uses multicast addresses:
+  - 224.0.0.5 (All OSPF Routers)
+  - 224.0.0.6 (DR/BDR Routers)
+
+---
+
+## 📊 OSPF Metric (Cost)
+
+OSPF determines the best path using **cost**, calculated as:
+
+```
+Cost = Reference Bandwidth / Interface Bandwidth
+```
+
+Lower cost = Preferred path.
+
+---
+
+## 🔍 Important OSPF Concepts
+
+- **Neighbor Adjacency** → Routers form relationships
+- **DR (Designated Router)** → Reduces LSA traffic on multi-access networks
+- **BDR (Backup DR)** → Backup for DR
+- **LSA (Link-State Advertisement)** → Topology information exchange
+- **SPF Algorithm** → Calculates shortest path
+
+---
+
+## 🎯 Why OSPF is Used
+
+- Faster convergence than RIP
+- Better scalability
+- Efficient routing updates
+- Suitable for enterprise networks
+
+---
+
+## 🧠 In Simple Terms
+
+OSPF allows routers to share full topology information, calculate the shortest path using SPF, and dynamically update routing tables when changes occur.
+
+
 ## Topology
 
 ![Topology](docs/topology.png)

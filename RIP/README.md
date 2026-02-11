@@ -9,7 +9,6 @@ This project demonstrates dynamic routing using **RIPv2** across three Cisco rou
 # 📚 What is RIP?
 
 **RIP (Routing Information Protocol)** is one of the oldest distance-vector routing protocols used for dynamic routing within a network.
-
 It is designed for small networks and uses hop count as its routing metric.
 
 RIP automatically shares routing information between routers, allowing them to learn about remote networks without manually configuring static routes.
@@ -41,11 +40,8 @@ Lower hop count = Better route.
 ## 🔄 How RIP Works
 
 1️⃣ Routers send their full routing table to neighbors every 30 seconds.
-
 2️⃣ Neighbor routers update their routing tables based on received information.
-
 3️⃣ If a better route (lower hop count) is found, it replaces the existing route.
-
 4️⃣ RIP uses loop-prevention mechanisms such as:
    - Split Horizon
    - Route Poisoning

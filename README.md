@@ -20,16 +20,16 @@ This guide is useful for networking labs and enterprise design understanding.
 **Metric:** Hop Count (Maximum 15 hops)  
 **Algorithm:** Bellman-Ford  
 
-### Key Characteristics
+## Key Characteristics
 - Simple configuration
 - Sends full routing updates every 30 seconds
 - Slow convergence
 - Not scalable for large networks
 
-### Best Use Case
+## Best Use Case
 Small networks and lab environments.
 
-### Summary
+## Summary
 RIP is a basic distance vector protocol that uses hop count as its metric. It is simple but limited to 15 hops, making it unsuitable for large enterprise networks.
 
 ---
@@ -40,16 +40,16 @@ RIP is a basic distance vector protocol that uses hop count as its metric. It is
 **Metric:** Bandwidth + Delay (Composite Metric)  
 **Algorithm:** DUAL  
 
-### Key Characteristics
+## Key Characteristics
 - Fast convergence
 - Sends partial updates
 - Maintains neighbor and topology tables
 - Originally Cisco proprietary
 
-### Best Use Case
+## Best Use Case
 Medium to large enterprise networks, especially Cisco-based environments.
 
-### Summary
+## Summary
 EIGRP is a hybrid routing protocol that uses the DUAL algorithm to achieve fast convergence and efficient bandwidth usage.
 
 ---
@@ -60,16 +60,16 @@ EIGRP is a hybrid routing protocol that uses the DUAL algorithm to achieve fast 
 **Metric:** Cost (based on bandwidth)  
 **Algorithm:** Dijkstra SPF  
 
-### Key Characteristics
+## Key Characteristics
 - Fast convergence
 - Uses Link State Advertisements (LSAs)
 - All routers maintain full topology database
 - Open standard protocol
 
-### Best Use Case
+## Best Use Case
 Enterprise networks requiring scalability and multi-vendor support.
 
-### Summary
+## Summary
 OSPF is a link-state protocol that calculates the shortest path using SPF algorithm and is widely used in enterprise networks.
 
 ---
@@ -80,16 +80,16 @@ OSPF is a link-state protocol that calculates the shortest path using SPF algori
 **Metric:** Cost  
 **Backbone Area:** Area 0 (Mandatory)  
 
-### Key Characteristics
+## Key Characteristics
 - Divides network into multiple areas
 - Reduces routing table size
 - Limits LSA flooding
 - Uses Area Border Routers (ABR)
 
-### Why Use Multi-Area?
+## Why Use Multi-Area?
 Improves scalability and reduces CPU and memory utilization in large networks.
 
-### Summary
+## Summary
 Multi-Area OSPF enhances scalability by dividing large networks into smaller areas connected through Area 0, reducing routing overhead.
 
 ---
@@ -100,16 +100,16 @@ Multi-Area OSPF enhances scalability by dividing large networks into smaller are
 **Metric:** Path Attributes (AS-PATH, Local Preference, MED, etc.)  
 **Used Between:** Autonomous Systems  
 
-### Key Characteristics
+## Key Characteristics
 - Policy-based routing
 - Highly scalable
 - Slower convergence than IGPs
 - Backbone of the Internet
 
-### Best Use Case
+## Best Use Case
 ISP networks, multi-homed enterprises, and inter-AS routing.
 
-### Summary
+## Summary
 BGP is a path vector protocol used between autonomous systems. It selects routes based on policies and path attributes and forms the backbone of the Internet.
 
 ---
@@ -144,26 +144,26 @@ This document explains three core routing concepts in simple terms:
 - Routing Protocol Types
 ---
 ## 1. Metric
-### Definition
+## Definition
 A **metric** is a value used by a routing protocol to choose the best path to a destination network.
 Lower metric = Better path.
-### Examples by Protocol
+## Examples by Protocol
 | Protocol | Metric Used |
 |-----------|------------|
 | RIP | Hop Count |
 | EIGRP | Bandwidth + Delay |
 | OSPF | Cost (based on bandwidth) |
 | BGP | Path Attributes (AS-PATH, Local Preference, etc.) |
-### Summary
+## Summary
 A metric is the numerical value used by routing protocols to select the most efficient route.
 ---
 ## 2. Convergence
-### Definition
+## Definition
 Convergence is the time it takes for all routers in a network to update their routing tables after a topology change.
 Example:  
 If a link fails, routers must detect the failure and calculate a new best path.
 Faster convergence = More stable network.
-### Convergence Comparison
+## Convergence Comparison
 | Protocol | Speed |
 |-----------|--------|
 | RIP | Slow |
@@ -171,31 +171,31 @@ Faster convergence = More stable network.
 | OSPF | Fast |
 | Multi-Area OSPF | Very Scalable |
 | BGP | Slower but Stable |
-### Summary
+## Summary
 Convergence is the time required for all routers to have consistent and updated routing information after a network change.
 ---**
 ## 3. Routing Protocol Types
 Routing protocols are categorized based on how they share routing information.
-### Distance Vector
+## Distance Vector
 - Sends routing table to neighbors
 - Simpler design
 - Slower convergence
 Example: RIP
 ---
-### Link-State
+## Link-State
 - Builds full network topology map
 - Uses SPF algorithm
 - Faster and scalable
 Example: OSPF
 ---
-### Hybrid
+## Hybrid
 - Combines features of distance vector and link-state
 - Fast convergence
 - Efficient updates
 
 Example: EIGRP
 ---
-### Path Vector
+## Path Vector
 - Used between Autonomous Systems
 - Uses routing policies and attributes
 Example: BGP

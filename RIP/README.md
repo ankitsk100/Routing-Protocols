@@ -4,6 +4,9 @@ This project demonstrates dynamic routing using **RIPv2** across three Cisco rou
 
 ---
 
+## Network Topology
+
+![Topology](docs/topology.png)
 ---
 
 # 📚 What is RIP?
@@ -100,11 +103,6 @@ It is rarely used in modern enterprise environments.
 ## 🧠 In Simple Terms
 
 RIP allows routers to share routes with neighbors and choose paths based on the fewest number of hops, making it simple but limited in scalability.
-
-
-## Network Topology
-
-![Topology](docs/topology.png)
 
 ---
 

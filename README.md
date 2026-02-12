@@ -154,7 +154,7 @@ Lower metric = Better path.
 | EIGRP | Bandwidth + Delay |
 | OSPF | Cost (based on bandwidth) |
 | BGP | Path Attributes (AS-PATH, Local Preference, etc.) |
-### Interview Summary
+### Summary
 A metric is the numerical value used by routing protocols to select the most efficient route.
 ---
 ## 2. Convergence
@@ -173,7 +173,7 @@ Faster convergence = More stable network.
 | BGP | Slower but Stable |
 ### Summary
 Convergence is the time required for all routers to have consistent and updated routing information after a network change.
----
+---**
 ## 3. Routing Protocol Types
 Routing protocols are categorized based on how they share routing information.
 ### Distance Vector

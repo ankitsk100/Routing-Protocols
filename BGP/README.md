@@ -12,6 +12,10 @@ The objective is to establish BGP neighbor relationships and advertise directly 
 
 ---
 
+## 🗺 Network Topology
+
+![BGP Multi-AS Topology](docs/topology.png)
+
 ## 📚 What is BGP?
 
 The **Border Gateway Protocol (BGP)** is a path-vector routing protocol used to exchange routing information between different Autonomous Systems (AS) on the Internet.
@@ -82,10 +86,6 @@ This lab demonstrates:
 - Real-world ISP simulation
 
 ---
-
-## 🗺 Network Topology
-
-![BGP Multi-AS Topology](docs/topology.png)
 
 ### Addressing Scheme
 

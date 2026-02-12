@@ -4,6 +4,12 @@ This project demonstrates dynamic routing using **EIGRP (AS 30)** across four Ci
 
 ---
 
+## Network Topology
+
+![Topology](docs/topology.png)
+
+---
+
 # 📚 What is EIGRP?
 
 **EIGRP (Enhanced Interior Gateway Routing Protocol)** is an advanced distance-vector routing protocol developed by Cisco.
@@ -99,11 +105,6 @@ Understanding EIGRP is essential for:
 - NOC Engineers
 - Infrastructure Engineers
 - OT Network Engineers
-
----
-## Network Topology
-
-![Topology](docs/topology.png)
 
 ---
 

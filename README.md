@@ -136,5 +136,73 @@ BGP is a path vector protocol used between autonomous systems. It selects routes
 
 ---
 
-Author: Networking Lab Projects  
-Purpose: Academic Labs | Interview Preparation | Enterprise Routing Concepts
+# Routing Concepts: Metric, Convergence, and Protocol Types
+
+This document explains three core routing concepts in simple terms:
+- Metric
+- Convergence
+- Routing Protocol Types
+---
+## 1. Metric
+### Definition
+A **metric** is a value used by a routing protocol to choose the best path to a destination network.
+Lower metric = Better path.
+### Examples by Protocol
+| Protocol | Metric Used |
+|-----------|------------|
+| RIP | Hop Count |
+| EIGRP | Bandwidth + Delay |
+| OSPF | Cost (based on bandwidth) |
+| BGP | Path Attributes (AS-PATH, Local Preference, etc.) |
+### Interview Summary
+A metric is the numerical value used by routing protocols to select the most efficient route.
+---
+## 2. Convergence
+### Definition
+**Convergence** is the time it takes for all routers in a network to update their routing tables after a topology change.
+Example:  
+If a link fails, routers must detect the failure and calculate a new best path.
+Faster convergence = More stable network.
+### Convergence Comparison
+| Protocol | Speed |
+|-----------|--------|
+| RIP | Slow |
+| EIGRP | Fast |
+| OSPF | Fast |
+| Multi-Area OSPF | Very Scalable |
+| BGP | Slower but Stable |
+### Summary
+Convergence is the time required for all routers to have consistent and updated routing information after a network change.
+---
+## 3. Routing Protocol Types
+Routing protocols are categorized based on how they share routing information.
+### Distance Vector
+- Sends routing table to neighbors
+- Simpler design
+- Slower convergence
+Example: RIP
+---
+### Link-State
+- Builds full network topology map
+- Uses SPF algorithm
+- Faster and scalable
+Example: OSPF
+---
+### Hybrid
+- Combines features of distance vector and link-state
+- Fast convergence
+- Efficient updates
+
+Example: EIGRP
+---
+### Path Vector
+- Used between Autonomous Systems
+- Uses routing policies and attributes
+Example: BGP
+---
+## Final Summary
+- Metric = Value used to choose best route  
+- Convergence = Time to update routes after change  
+- Protocol Types = Distance Vector, Link-State, Hybrid, Path Vector  
+
+This knowledge is fundamental for enterprise routing design.

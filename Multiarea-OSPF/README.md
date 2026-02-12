@@ -3,6 +3,9 @@
 This project demonstrates a **Multi-Area OSPF** design (Area 0 backbone + non-backbone areas) using Cisco routers in **Packet Tracer**.
 
 ---
+## Topology
+
+![Topology](docs/topology.png)
 
 # 📚 What is Multi-Area OSPF?
 
@@ -72,10 +75,6 @@ Single-Area OSPF works for small networks.
 
 Multi-Area OSPF is designed for large enterprise or campus networks where dividing the network into logical areas improves performance and management.
 ---
-
-## Topology
-
-![Topology](docs/topology.png)
 
 ## What’s Included
 - Packet Tracer lab file (`.pkt`)

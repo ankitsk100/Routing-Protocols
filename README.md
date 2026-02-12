@@ -114,7 +114,7 @@ BGP is a path vector protocol used between autonomous systems. It selects routes
 
 ---
 
-# Quick Comparison Table
+## Quick Comparison Table
 
 | Feature | RIP | EIGRP | OSPF | Multi-Area OSPF | BGP |
 |----------|------|--------|-------|----------------|------|
@@ -126,7 +126,7 @@ BGP is a path vector protocol used between autonomous systems. It selects routes
 
 ---
 
-# Final Summary
+## Final Summary
 
 - RIP is simple but outdated.
 - EIGRP offers fast convergence in Cisco environments.
@@ -136,7 +136,7 @@ BGP is a path vector protocol used between autonomous systems. It selects routes
 
 ---
 
-# Routing Concepts: Metric, Convergence, and Protocol Types
+## Routing Concepts: Metric, Convergence, and Protocol Types
 
 This document explains three core routing concepts in simple terms:
 - Metric

@@ -10,7 +10,7 @@ This document provides a concise comparison of major routing protocols:
 - Multi-Area OSPF
 - BGP
 
-This guide is useful for networking labs, interviews, and enterprise design understanding.
+This guide is useful for networking labs and enterprise design understanding.
 
 ---
 

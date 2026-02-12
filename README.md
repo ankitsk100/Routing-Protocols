@@ -156,8 +156,8 @@ Lower metric = Better path.
 | BGP | Path Attributes (AS-PATH, Local Preference, etc.) |
 ## Summary
 
-###A metric is the numerical value used by routing protocols to select the most efficient route.
----
+A metric is the numerical value used by routing protocols to select the most efficient route.
+
 ## 2. Convergence
 ### Definition
 Convergence is the time it takes for all routers in a network to update their routing tables after a topology change.

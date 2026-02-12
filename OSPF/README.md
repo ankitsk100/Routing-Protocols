@@ -3,6 +3,9 @@
 This project demonstrates a basic multi-router OSPF deployment (Area 0) connecting three LANs using a triangular WAN design. All routers form OSPF neighbor adjacencies and advertise their directly connected networks.
 
 ---
+## Topology
+
+![Topology](docs/topology.png)
 
 # 📚 What is OSPF?
 
@@ -88,11 +91,6 @@ Lower cost = Preferred path.
 ## 🧠 In Simple Terms
 
 OSPF allows routers to share full topology information, calculate the shortest path using SPF, and dynamically update routing tables when changes occur.
-
-
-## Topology
-
-![Topology](docs/topology.png)
 
 ## Network Design
 
